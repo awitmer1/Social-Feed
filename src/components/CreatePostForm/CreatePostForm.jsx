@@ -1,32 +1,52 @@
 import React, { useState } from 'react';
+import { FormGroup } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
-const CreatePostForm = () => {
+const CreatePostForm = (props) => {
 
     const [name, setName] = useState('');
     const [socialPost, setSocialPost] = useState('');
 
-    function onSubmit(formEvent){
+    function handleSubmit(event){
 
-        const formValuesObject = {
+        event.preventDefault();
+
+        let newEntry = {
             name: name,
             socialPost: socialPost
-        }
+        };
 
-        console.log(formValuesObject);
-        // props.submitPost(formValuesObject);
+        console.log(newEntry);
+        props.addNewEntryProperty(newEntry);    
     }
 
 
     return (
-        <form onSubmit={onSubmit}>
-            <label for="">Name</label><br></br>
-            <input type="text" value={name} name="name" onChange={(event) => setName(event.target.value)}/><br></br>
-            <label for="social-post">Post</label><br></br>
-            <input type="textarea" rows="10" name="social-post" value={socialPost} onChange={(event) => setSocialPost(event.target.value)}/><br></br>
-            <button type='submit'>Create</button>
-        </form>
+        <Form onSubmit={handleSubmit}>
+            <FormGroup className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Label for="name">Name</Form.Label>
+                <Form.Control type="text" name="name" value={name} onChange={(event) => setName(event.target.value)}/>
+            </FormGroup>
+            <FormGroup className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Label for="social-post">Post</Form.Label>
+                <Form.Control as="textarea" rows={3} name="social-post" value={socialPost} onChange={(event) => setSocialPost(event.target.value)}/>     
+            </FormGroup>
+            <Button variant="primary" type='submit'>Create</Button>
+        </Form>
     );
 }
+
+<Form>
+<Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+  <Form.Label>Email address</Form.Label>
+  <Form.Control type="email" placeholder="name@example.com" />
+</Form.Group>
+<Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+  <Form.Label>Example textarea</Form.Label>
+  <Form.Control as="textarea" rows={3} />
+</Form.Group>
+</Form>
 
 export default CreatePostForm;
 
