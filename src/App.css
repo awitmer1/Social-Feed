@@ -1,0 +1,71 @@
+
+* {
+    background-color: rgba(100, 212, 249, 0.1);
+}
+
+form {
+    background-color: white;
+}
+
+.mb-3 {
+    background-color: white;
+}
+    
+.form-label {
+    background-color: white;
+}
+
+.post-form {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    border: 1px;
+    border-style: solid;
+    border-color: black ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 5px 10px 10px #888888;
+}
+
+.post-form div {
+    background-color: white;
+}
+
+.display-post {    
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    padding: 1rem;
+    box-shadow: 5px 10px 10px #888888;
+}
+
+.display-post div {
+    background-color: white;
+}
+
+h3 {
+    background-color: white;
+    padding-top: .5rem;
+}
+
+p {
+    background-color: white;
+}
+
+.like-buttons {
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+    font-size: 1.5rem; 
+}
+
+button {
+    border: 0;
+    background-color: white;       
+}
+

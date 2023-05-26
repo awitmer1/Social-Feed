@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CreatePostForm from './components/CreatePostForm/CreatePostForm';
 import PostList from './components/PostList/PostList';
+import './App.css';
 
 
 
@@ -17,10 +18,15 @@ function App() {
   }
 
   return (
-    <div>
-      <CreatePostForm addNewEntryProperty={addNewEntry}/>
-      <PostList addParentEntry={entries}/>
+    <div className='container-fluid'>
+      <div className='post-form'>
+        <CreatePostForm addNewEntryProperty={addNewEntry}/>
+      </div>
+      <div className='display-post'>
+        <PostList addParentEntry={entries}/>
+      </div>
     </div>
+    
   );
 }
 
