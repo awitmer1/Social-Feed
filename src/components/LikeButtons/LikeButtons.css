@@ -1,0 +1,24 @@
+
+button {
+    color: lightsteelblue;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
+    font-size: 1.5rem; 
+}
+
+button:hover {
+    color: cadetblue;
+}
+
+button.likeButton-active {
+    background-color: white;
+    color:green
+}
+
+button.dislikeButton-active {
+    background-color: white;
+    color: crimson;
+}

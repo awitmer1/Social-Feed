@@ -1,11 +1,10 @@
 import React from 'react';
-// import like from '../images/like.png';
-// import dislike from '../images/dislike.png';
+import LikeButtons from '../LikeButtons/LikeButtons';
 
 const PostList = (props) => {
 
     return ( 
-        <div>
+        <div className='button-container'>
         {props.addParentEntry.map((entry) => {
             return (
                 <><div>
@@ -13,8 +12,7 @@ const PostList = (props) => {
                     <p>{entry.socialPost}</p>
                 </div>
                 <div className='like-buttons'>
-                    <button class="bi bi-hand-thumbs-up-fill"></button>
-                    <button class="bi bi-hand-thumbs-down-fill"></button>                    
+                    <LikeButtons />                    
                 </div></>                
             )})}                
         </div>
@@ -22,5 +20,3 @@ const PostList = (props) => {
 }
  
 export default PostList;
-
-// Buttons
