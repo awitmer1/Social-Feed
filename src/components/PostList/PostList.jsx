@@ -1,16 +1,15 @@
 import React from 'react';
 import LikeButtons from '../LikeButtons/LikeButtons';
+import Post from '../Post/Post';
 
 const PostList = (props) => {
 
     return ( 
         <div className='button-container'>
-        {props.addParentEntry.map((entry) => {
+        {props.addParentEntry.map((post) => {
             return (
-                <><div>
-                    <h3>{entry.name}</h3>
-                    <p>{entry.socialPost}</p>
-                </div>
+                <>             
+                <Post post={post}/>
                 <div className='like-buttons'>
                     <LikeButtons />                    
                 </div></>                
