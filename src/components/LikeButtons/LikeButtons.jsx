@@ -12,16 +12,18 @@ const LikeButtons = (props) => {
         
         if(likeButton === 'likeButton-inactive'){
             setLikeButton('likeButton-active');
+            setDislikeButton('dislikeButton-inactive');
         }
         else {
             setLikeButton('likeButton-inactive');
         }
     }
-
+    
     function handleClickDislike() {
         
         if(dislikeButton === 'dislikeButton-inactive'){
             setDislikeButton('dislikeButton-active');
+            setLikeButton('likeButton-inactive');
         }
         else {
             setDislikeButton('dislikeButton-inactive');

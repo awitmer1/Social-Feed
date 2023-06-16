@@ -14,11 +14,13 @@ const CreatePostForm = (props) => {
 
         let newEntry = {
             name: name,
-            socialPost: socialPost
+            socialPost: socialPost,
         };
 
         console.log(newEntry);
-        props.addNewEntryProperty(newEntry);    
+        props.addNewEntryProperty(newEntry);
+        setName("");
+        setSocialPost("");  
     }
 
 
